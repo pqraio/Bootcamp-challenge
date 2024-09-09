@@ -41,11 +41,11 @@ public class Dev {
         System.out.println("Dev: " + nome);
         System.out.println("Cursos inscritos:");
         for (Curso curso : cursosInscritos) {
-            System.out.println(" - " + curso.getNome());
+            System.out.println(" - " + curso.getNome() + " (" + curso.getCargaHoraria() + " horas)");
         }
         System.out.println("Mentorias participantes:");
         for (Mentoria mentoria : mentoriasParticipantes) {
-            System.out.println(" - " + mentoria.getNome() + ": " + mentoria.getDescricao());
+            System.out.println(" - " + mentoria.getNome() + ": " + mentoria.getDescricao() + " em " + mentoria.getData());
         }
     }
 }
