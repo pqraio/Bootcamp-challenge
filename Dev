@@ -1,0 +1,51 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class Dev {
+
+    private String nome;
+    private Set<Curso> cursosInscritos;
+    private Set<Mentoria> mentoriasParticipantes;
+
+    public Dev(String nome) {
+        this.nome = nome;
+        this.cursosInscritos = new HashSet<>();
+        this.mentoriasParticipantes = new HashSet<>();
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Set<Curso> getCursosInscritos() {
+        return cursosInscritos;
+    }
+
+    public void inscreverCurso(Curso curso) {
+        this.cursosInscritos.add(curso);
+    }
+
+    public Set<Mentoria> getMentoriasParticipantes() {
+        return mentoriasParticipantes;
+    }
+
+    public void participarMentoria(Mentoria mentoria) {
+        this.mentoriasParticipantes.add(mentoria);
+    }
+
+    public void imprimirInformacoes() {
+        System.out.println("Dev: " + nome);
+        System.out.println("Cursos inscritos:");
+        for (Curso curso : cursosInscritos) {
+            System.out.println(" - " + curso.getNome());
+        }
+        System.out.println("Mentorias participantes:");
+        for (Mentoria mentoria : mentoriasParticipantes) {
+            System.out.println(" - " + mentoria.getNome() + ": " + mentoria.getDescricao());
+        }
+    }
+}
