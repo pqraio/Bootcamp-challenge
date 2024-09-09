@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+        Bootcamp bootcamp = new Bootcamp("Bootcamp Java Avançado");
+
+        Curso cursoJava = new Curso("Curso Java", 40);
+        Curso cursoSpring = new Curso("Curso Spring", 30);
+        Mentoria mentoriaJava = new Mentoria("Mentoria Java", "Discussão sobre tópicos avançados de Java");
+        Mentoria mentoriaSpring = new Mentoria("Mentoria Spring", "Discussão sobre tópicos avançados de Spring");
+
+        bootcamp.addCurso(cursoJava);
+        bootcamp.addCurso(cursoSpring);
+        bootcamp.addMentoria(mentoriaJava);
+        bootcamp.addMentoria(mentoriaSpring);
+
+        Dev dev1 = new Dev("Carlos");
+        dev1.inscreverCurso(cursoJava);
+        dev1.participarMentoria(mentoriaJava);
+
+        bootcamp.imprimirInformacoes();
+        dev1.imprimirInformacoes();
+    }
+}
