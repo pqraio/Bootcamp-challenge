@@ -1,22 +1,26 @@
 public class Main {
+
     public static void main(String[] args) {
-        Bootcamp bootcamp = new Bootcamp("Bootcamp Java Avançado");
+        Bootcamp moonCamp = new Bootcamp("MoonCamp");
 
-        Curso cursoJava = new Curso("Curso Java", 40);
-        Curso cursoSpring = new Curso("Curso Spring", 30);
-        Mentoria mentoriaJava = new Mentoria("Mentoria Java", "Discussão sobre tópicos avançados de Java");
-        Mentoria mentoriaSpring = new Mentoria("Mentoria Spring", "Discussão sobre tópicos avançados de Spring");
+        Curso cursoJava = new Curso("Curso de Java", 70, "Aprenda Java do básico ao avançado.");
+        Curso cursoPython = new Curso("Curso de Python", 60, "Introdução à programação em Python.");
+        
+        moonCamp.addCurso(cursoJava);
+        moonCamp.addCurso(cursoPython);
 
-        bootcamp.addCurso(cursoJava);
-        bootcamp.addCurso(cursoSpring);
-        bootcamp.addMentoria(mentoriaJava);
-        bootcamp.addMentoria(mentoriaSpring);
+        Mentoria mentoriaJava = new Mentoria("Mentoria de Java", "Tire dúvidas sobre Java com um especialista.", "2024-09-15");
+        Mentoria mentoriaPython = new Mentoria("Mentoria de Python", "Sessão de perguntas e respostas sobre Python.", "2024-09-22");
 
-        Dev dev1 = new Dev("Carlos");
+        moonCamp.addMentoria(mentoriaJava);
+        moonCamp.addMentoria(mentoriaPython);
+
+        Dev dev1 = new Dev("Luar");
+        
         dev1.inscreverCurso(cursoJava);
         dev1.participarMentoria(mentoriaJava);
 
-        bootcamp.imprimirInformacoes();
+        moonCamp.imprimirInformacoes();
         dev1.imprimirInformacoes();
     }
 }
