@@ -6,7 +6,7 @@ public class Bootcamp {
     private String nome;
     private List<Curso> cursos;
     private List<Mentoria> mentorias;
-    
+
     public Bootcamp(String nome) {
         this.nome = nome;
         this.cursos = new ArrayList<>();
@@ -36,16 +36,16 @@ public class Bootcamp {
     public void addMentoria(Mentoria mentoria) {
         this.mentorias.add(mentoria);
     }
-    
+
     public void imprimirInformacoes() {
         System.out.println("Bootcamp: " + nome);
         System.out.println("Cursos:");
         for (Curso curso : cursos) {
-            System.out.println(" - " + curso.getNome());
+            System.out.println(" - " + curso.getNome() + " (" + curso.getCargaHoraria() + " horas)");
         }
         System.out.println("Mentorias:");
         for (Mentoria mentoria : mentorias) {
-            System.out.println(" - " + mentoria.getNome());
+            System.out.println(" - " + mentoria.getNome() + ": " + mentoria.getDescricao());
         }
     }
 }
