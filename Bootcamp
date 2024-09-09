@@ -1,6 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
+// Classe Bootcamp
 public class Bootcamp {
 
     private String nome;
@@ -45,7 +48,7 @@ public class Bootcamp {
         }
         System.out.println("Mentorias:");
         for (Mentoria mentoria : mentorias) {
-            System.out.println(" - " + mentoria.getNome() + ": " + mentoria.getDescricao());
+            System.out.println(" - " + mentoria.getNome() + ": " + mentoria.getDescricao() + " em " + mentoria.getData());
         }
     }
 }
